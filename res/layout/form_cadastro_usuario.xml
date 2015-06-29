@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+    <TextView
+            android:id="@+id/label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+    <EditText
+            android:id="@+id/nome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/label"
+            android:text="Leandro Shindi Ekamoto"/>
+
+    <TextView
+            android:id="@+id/label2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:layout_below="@id/nome"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+    <EditText
+            android:id="@+id/email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/label2"
+            android:text="ekamoto.leandro@gmail.com"/>
+
+    <!--“android:layout_alignParentRight” diz que o botão começa a ser criado da direita para a esquerda-->
+    <Button
+            android:id="@+id/salvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:layout_alignParentRight="true"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dip"
+            android:text="Salvar" />
+
+    <!--A propriedade toLeftOf nos diz que o botão estará à esquerda do botão ok
+    e o alignTop alinha o botão com o OK, isso quer dizer que vai alinhar com a altura do botão ok, ou seja
+    se você aumentar a distância top do elemento ok o mesmo será para o elemento salvar-->
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/salvar"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_alignTop="@id/salvar"
+            android:text="Cancelar" android:id="@+id/cancelar"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@android:color/black"
+              android:layout_below="@+id/salvar"
+              android:layout_alignParentRight="true"
+              android:textStyle="italic"
+            android:text="Leandro Shindi Ekamoto"/>
+
+</RelativeLayout>
